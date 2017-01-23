@@ -11,9 +11,10 @@ function power(mtrx,p)
 {
     //mtrx is the matrix you input
     //p is the power of the matrix you want
-    for (let i = 0; i <= p; i++)
+    let oldmtrx = mtrx;
+    for (let i = 0; i <= p-1; i++)
     {
-        mtrx = Matrix(mtrx.prod(mtrx));
+        mtrx = Matrix(oldmtrx.prod(mtrx));
     }
 
     return mtrx();
@@ -22,4 +23,4 @@ function power(mtrx,p)
 
 
 //testing code
-console.log(power(A,10));
+console.log(power(A,8));
